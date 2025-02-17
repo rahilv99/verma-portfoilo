@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { Resend } from 'resend'
 
-const resend = new Resend('re_VV2fE8pB_BLudMxwt3qXrFb1AZzjE6iru')
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),

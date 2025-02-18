@@ -6,10 +6,7 @@ import { Mail, MapPin, Phone, Send, Loader2 } from "lucide-react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
-import { Resend } from 'resend'
 
-
-const resend = new Resend(process.env.RESEND_API_KEY)
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -38,12 +35,12 @@ export default function Contact() {
     setIsSubmitting(true)
     try {
       // Here you would typically send the form data to your backend
-      await resend.emails.send({
-        from: 'portfolio@auxiomai.com', // using auxiom DNS
-        to: 'rahilv99@gmail.com', 
-        subject: `Portfolio Contact Point: ${data.subject}`,
-        text: data.message,
-      })
+      // await resend.emails.send({
+      //   from: 'portfolio@auxiomai.com', // using auxiom DNS
+      //   to: 'rahilv99@gmail.com', 
+      //   subject: `Portfolio Contact Point: ${data.subject}`,
+      //   text: data.message,
+      // })
       setSubmitSuccess(true)
       reset()
       setTimeout(() => setSubmitSuccess(false), 3000)

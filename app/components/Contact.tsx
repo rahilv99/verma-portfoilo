@@ -41,6 +41,7 @@ export default function Contact() {
       //   subject: `Portfolio Contact Point: ${data.subject}`,
       //   text: data.message,
       // })
+      console.log(data)
       setSubmitSuccess(true)
       reset()
       setTimeout(() => setSubmitSuccess(false), 3000)

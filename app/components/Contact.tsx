@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { Resend } from 'resend'
 
+
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 const formSchema = z.object({

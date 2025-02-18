@@ -30,7 +30,7 @@ export default function About() {
         </motion.h2>
         <div className="flex flex-col md:flex-row items-center justify-center">
           <motion.div
-            className="md:w-1/2 grid grid-cols-3 gap-6"
+            className="md:w-1/2 grid md:grid-cols-3 gap-6 sm:grid-cols-1"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
